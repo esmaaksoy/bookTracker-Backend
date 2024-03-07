@@ -19,4 +19,7 @@ export const detail = [
   {
     header: "Publication:",
   },
+  {
+    header: "Publication:",
+  },
 ];
