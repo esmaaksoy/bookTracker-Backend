@@ -12,4 +12,8 @@ require('express-async-errors')
 app.use(require("./routes/book.router"))
 app.use(require('./errorHandler'))
 
+const cors = require("cors")
+app.use(cors())
+
+
 app.listen(PORT, () => console.log("Running " + PORT))
