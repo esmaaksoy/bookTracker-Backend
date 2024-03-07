@@ -1,5 +1,6 @@
-import Book from "./Book"
-function App() {
+import Book from "../components/Book";
+
+const Home = () => {
   return (
     <>
       <div className="flex gap-8 justify-center items-end border-b border-b-gray-800 w-[50%] m-auto">
@@ -17,11 +18,14 @@ function App() {
         </div>
       </div>
       <div className="flex p-10 gap-4">
-    <Book />
-
+        <Book />
+        <Book />
+        <Book />
       </div>
     </>
   );
 }
 
-export default App;
+export default Home
+
+
