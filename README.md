@@ -10,9 +10,6 @@ This project is a Book Tracker application built with Express.js and Sequelize O
 
 ## Tech/framework used
 
-Database: PostgreSQL is used as the database to store book information.
-CORS: Cross-Origin Resource Sharing (CORS) is implemented to allow the frontend to communicate with the backend server.
-
 - **CRUD Operations**
   Users can create, read, update, and delete books from the database.
 - **Sequelize ORM**
