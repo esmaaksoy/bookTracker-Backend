@@ -6,20 +6,25 @@ export const input = [
   { type: "number", placeholder: "Enter Year", name: "publicationYear" },
   { type: "url", placeholder: "Enter image url", name: "image" },
 ];
-export const detail = [
+export const detailData = [
   {
     header: "Title:",
+    content:"title",
   },
   {
     header: "Author:",
+    content:"author",
   },
   {
     header: "Genre:",
+    content:"genre",
   },
   {
     header: "Publication:",
+    content:"publicationYear",
   },
   {
-    header: "Publication:",
+    header: "ISBN:",
+    content:"ISBN",
   },
 ];

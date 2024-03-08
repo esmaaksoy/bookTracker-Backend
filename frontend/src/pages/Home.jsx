@@ -1,32 +1,13 @@
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import Book from "../components/Book";
 import Header from "../components/Header";
 import Form from "../components/Form";
 import NoData from "../components/NoData";
-import axios from "axios";
+import { useBookContext } from "../context/BookContextProvider";
 
 const Home = () => {
-  const [book, setBook] = useState([]);
-  const [open, setOpen] = useState(false);
-  const [data, setData] = useState({
-    title: "",
-    author: "",
-    ISBN: "",
-    genre: "",
-    publicationYear: "",
-    image: "",
-  });
-  const getBook = async () => {
-    try {
-      const { data } = await axios("http://localhost:8000/");
-      setBook(data.result.rows);
-    } catch (error) {}
-  };
-  useEffect(() => {
-    getBook();
-  }, []);
+  const  {book,open,setOpen}  = useBookContext();
 
-console.log(book)
 
   return (
     <div className="p-[4rem]">
@@ -43,14 +24,14 @@ console.log(book)
       </div>
       {open && (
         <Form
-          setOpen={setOpen}
-          data={data}
-          setData={setData}
-          setBook={setBook}
         />
       )}
-      <div className="flex gap-4">
-        {book?.length === 0 ? <NoData /> : book?.map((item,index)=><Book {...item} key={index}/>)}
+      <div className="flex gap-4 justify-center">
+        {book?.length === 0 ? (
+          <NoData />
+        ) : (
+          book?.map((item, index) => <Book {...item} key={index} />)
+        )}
       </div>
     </div>
   );
