@@ -4,7 +4,7 @@ const express = require("express");
 const app = express();
 
 const cors = require("cors");
-app.use(cors({ origin: "http://localhost:3000" }));
+app.use(cors({ origin: "https://book-tracker-frontend-five.vercel.app/" }));
 
 require("dotenv").config();
 const PORT = process.env.PORT || 8000;
