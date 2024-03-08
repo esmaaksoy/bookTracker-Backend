@@ -4,12 +4,12 @@ import { input } from "../helpers/Data";
 const Form = ({id,detail }) => {
   const { postBook, putBook, setOpen } = useBookContext();
   const [data, setData] = useState({
-    title: "" ,
-    author: "" ,
-    ISBN: "" ,
-    genre: "",
-    publicationYear: "",
-    image: "" ,
+    title: detail ? detail.title : "",
+    author: detail ? detail.author : "",
+    ISBN: detail ? detail.ISBN : "",
+    genre: detail ? detail.genre : "",
+    publicationYear: detail ? detail.publicationYear : "",
+    image: detail ? detail.image : "",
   });
 
   const handleChange = (e) => {
@@ -25,8 +25,6 @@ const Form = ({id,detail }) => {
       postBook(data);
     }
   };
-console.log(data)
-
   return (
     <form
       onSubmit={handleSubmit}
@@ -45,7 +43,7 @@ console.log(data)
           placeholder={placeholder}
           key={index}
           name={name}
-          value={data[name] || detail[name]}
+          value={data[name] || ""}
           onChange={handleChange}
         />
       ))}

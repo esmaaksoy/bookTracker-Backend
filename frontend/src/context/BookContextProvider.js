@@ -55,6 +55,7 @@ const BookContextProvider = ({ children }) => {
       await axios.put(`http://localhost:8000/${id}`, info);
       setBook(info);
       toastSuccessNotify("Edited Book.");
+      getDetail(id)
     } catch (error) {
       toastErrorNotify("An unexpected error occurred.");
     }
