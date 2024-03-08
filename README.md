@@ -28,7 +28,7 @@ CORS: Cross-Origin Resource Sharing (CORS) is implemented to allow the frontend 
 - **Other Dependencies**
   Various other dependencies are used for routing, middleware, and error handling.
 
-  ## Getting Started
+## Getting Started
 
 This is an example of how you may give instructions on setting up your project locally.
 To get a local copy up and running follow these simple example steps.
