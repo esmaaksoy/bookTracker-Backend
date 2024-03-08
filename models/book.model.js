@@ -11,5 +11,5 @@ module.exports = sequelize.define("books", {
   publicationYear: { type: DataTypes.INTEGER },
   image: { type: DataTypes.STRING, allowNull: false },
 });
-
+// sequelize.sync()
 sequelize.authenticate().then(()=>console.log("DB Connected")).catch(()=> console.log("DB Not Connected"))
